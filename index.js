@@ -17,7 +17,7 @@ Navigation.events().registerAppLaunchedListener(() =>
                 {
                   component: {
                     id: 'HOME_SCREEN',
-                    name: ROUTE_NAME.APP,
+                    name: ROUTE_NAME.APP_HOME,
                   },
                 },
               ],
@@ -31,25 +31,30 @@ Navigation.events().registerAppLaunchedListener(() =>
           },
           {
             stack: {
-              id: 'PROFILE_TAB',
+              id: 'SEARCH_TAB',
               children: [
                 {
                   component: {
-                    id: 'PROFILE_SCREEN',
+                    id: 'SEARCH_SCREEN',
                     name: ROUTE_NAME.APP,
                   },
                 },
               ],
               options: {
                 bottomTab: {
-                  text: 'Home',
+                  text: 'Search',
                   // icon: require('./profile.png'),
                 },
               },
             },
           },
         ],
+        options: {bottomTabs: {borderColor: 'red', borderWidth: 10}},
       },
     },
   }),
 );
+
+Navigation.mergeOptions('BOTTOM_TABS_LAYOUT', {
+  bottomTab: {selectedTextColor: 'blue'},
+});
