@@ -55,6 +55,12 @@ const styles = StyleSheet.create({
     lineHeight: 27,
     fontSize: 18,
   },
+  headerH1: {
+    fontFamily: 'Poppins-SemiBold',
+    fontWeight: '700',
+    lineHeight: 30,
+    fontSize: 24,
+  },
 
   detailAvatar: {
     fontFamily: 'Poppins-SemiBold',

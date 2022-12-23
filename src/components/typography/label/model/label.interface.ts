@@ -1,26 +1,26 @@
 import {ReactElement} from 'react';
 
 export enum ETypographyVariant {
-  SMALL_REGULAR_POPPINS = 'labelPoppinsSmallRegular',
-  SMALL_MEDIUM_POPPINS = 'labelPoppinsSmallMedium',
-  SMALL_SEMIBOLD_POPPINS = 'labelPoppinsSmallSemiBold',
+  SMALL_REGULAR = 'labelPoppinsSmallRegular',
+  SMALL_MEDIUM = 'labelPoppinsSmallMedium',
+  SMALL_SEMIBOLD = 'labelPoppinsSmallSemiBold',
 
-  MEDIUM_REGULAR_POPPINS = 'labelPoppinsMediumRegular',
-  MEDIUM_MEDIUM_POPPINS = 'labelPoppinsMediumMedium',
-  MEDIUM_SEMIBOLD_POPPINS = 'labelPoppinsMediumSemiBold',
+  MEDIUM_REGULAR = 'labelPoppinsMediumRegular',
+  MEDIUM_MEDIUM = 'labelPoppinsMediumMedium',
+  MEDIUM_SEMIBOLD = 'labelPoppinsMediumSemiBold',
 
-  LARGE_REGULAR_POPPINS = 'labelPoppinsLargeRegular',
-  LARGE_MEDIUM_POPPINS = 'labelPoppinsLargeMedium',
-  LARGE_SEMIBOLD_POPPINS = 'labelPoppinsLargeSemiBold',
+  LARGE_REGULAR = 'labelPoppinsLargeRegular',
+  LARGE_MEDIUM = 'labelPoppinsLargeMedium',
+  LARGE_SEMIBOLD = 'labelPoppinsLargeSemiBold',
 
-  PARAGRAPH_SMALL_REGULAR_POPPINS = 'paragraphSmallRegularPoppins',
-  PARAGRAPH_SMALL_MEDIUM_POPPINS = 'paragraphSmallMediumPoppins',
+  PARAGRAPH_SMALL_REGULAR = 'paragraphSmallRegularPoppins',
+  PARAGRAPH_SMALL_MEDIUM = 'paragraphSmallMediumPoppins',
 
-  PARAGRAPH_MEDIUM_REGULAR_POPPINS = 'paragraphMediumRegularPoppins',
-  PARAGRAPH_MEDIUM_MEDIUM_POPPINS = 'paragraphMediumMediumPoppins',
+  PARAGRAPH_MEDIUM_REGULAR = 'paragraphMediumRegularPoppins',
+  PARAGRAPH_MEDIUM_MEDIUM = 'paragraphMediumMediumPoppins',
 
-  PARAGRAPH_LARGE_REGULAR_POPPINS = 'paragraphLargeRegularPoppins',
-  PARAGRAPH_LARGE_MEDIUM_POPPINS = 'paragraphLargeMediumPoppins',
+  PARAGRAPH_LARGE_REGULAR = 'paragraphLargeRegularPoppins',
+  PARAGRAPH_LARGE_MEDIUM = 'paragraphLargeMediumPoppins',
 
   HEADER_H1 = 'headerH1',
   HEADER_H2 = 'headerH2',

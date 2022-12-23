@@ -1,7 +1,7 @@
 import {action, makeAutoObservable, observable, runInAction} from 'mobx';
 import {createContext, useContext} from 'react';
 
-enum IAppTheme {
+export enum IAppTheme {
   LIGHT,
   DARK,
 }
