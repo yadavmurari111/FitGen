@@ -1,23 +1,32 @@
-import {action, makeAutoObservable, observable} from 'mobx';
+import {action, makeAutoObservable, observable, runInAction} from 'mobx';
 import {createContext, useContext} from 'react';
+import {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
 export const CURRENT_LOGIN_USER = '@LoggedInUser';
 
 class UserProfileDataStore {
-  zingUser = {
+  LoggedInUserData = {
     isLoading: <boolean>true,
-    authToken: <string | null>null,
-    user: <null>null,
+    user: <FirebaseAuthTypes.UserCredential | null>null,
   };
 
   constructor() {
     makeAutoObservable(this, {
-      zingUser: observable,
+      LoggedInUserData: observable,
       setProfileData: action.bound,
     });
   }
 
-  async setProfileData() {}
+  async setProfileData(data: FirebaseAuthTypes.UserCredential) {
+    const LoggedInUserData = {
+      isLoading: false,
+      user: data,
+    };
+
+    runInAction(() => {
+      this.LoggedInUserData = LoggedInUserData;
+    });
+  }
 }
 
 // Instantiate the counter store.

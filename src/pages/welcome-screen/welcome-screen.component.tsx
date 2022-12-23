@@ -5,10 +5,14 @@ import {WebClientId} from './welcome-screen.services';
 import {IWelcomeScreenInterface} from './welcome-screen.interface';
 import auth from '@react-native-firebase/auth';
 import {goToHome} from '../../navigation/app-root';
+import {storeData} from '../../utils/utils';
+import {useUserProfileDataStore} from '../../stores/UserProfileData.Store';
 
 const WelcomeScreenComponent: FunctionComponent<
   IWelcomeScreenInterface
 > = () => {
+  const {setProfileData} = useUserProfileDataStore();
+
   useEffect(() => {
     GoogleSignin.configure({
       webClientId: WebClientId,
@@ -23,9 +27,12 @@ const WelcomeScreenComponent: FunctionComponent<
   };
 
   const signIn = () => {
-    onGoogleButtonPress().then(result => {
-      console.log(result);
-      goToHome();
+    onGoogleButtonPress().then(async result => {
+      if (result) {
+        console.log(result);
+        await setProfileData(result);
+        storeData(result).then(() => goToHome());
+      }
     });
   };
 
